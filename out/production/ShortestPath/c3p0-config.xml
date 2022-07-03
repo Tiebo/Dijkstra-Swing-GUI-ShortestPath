@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <!--
+    C3P0的缺省(默认)配置，
+    -->
+    <default-config>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/test</property>
+        <property name="user">root</property>
+        <property name="password">admin</property>
+
+        <property name="acquireIncrement">5</property>
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">5</property>
+        <property name="maxPoolSize">20</property>
+    </default-config>
+
+    <!--
+    C3P0的命名配置，
+    -->
+    <named-config name="MySQL">
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/path</property>
+        <property name="user">root</property>
+        <property name="password">admin</property>
+
+        <property name="acquireIncrement">5</property>
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">5</property>
+        <property name="maxPoolSize">20</property>
+    </named-config>
+
+</c3p0-config>
